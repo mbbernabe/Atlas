@@ -1,0 +1,953 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FD810C90-9D7B-44D0-AA28-4418E79AE6AD}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AtlasRadioDiagnostico</RootNamespace>
+    <AssemblyName>AtlasRadioDiagnostico</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>AtlasRadioDiagnostico.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>AtlasRadioDiagnostico.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Default\atlas.css" />
+    <Content Include="App_Themes\Default\site_conceitual.css" />
+    <Content Include="App_Themes\Default\site_conceitual_old.css" />
+    <Content Include="App_Themes\Default\Styles.css" />
+    <Content Include="App_Themes\Default\StyleSheet.css" />
+    <Content Include="css\empresa.htm" />
+    <Content Include="css\imaging.css" />
+    <Content Include="css\imaging.js" />
+    <Content Include="css\site_admin.css" />
+    <Content Include="css\site_conceitual.css" />
+    <Content Include="css\tabs.css" />
+    <Content Include="css\winxp.blue.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administracao\AcessoNaoPermitido.aspx.designer.vb">
+      <DependentUpon>AcessoNaoPermitido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\AcessoNaoPermitido.aspx.vb">
+      <DependentUpon>AcessoNaoPermitido.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Administracao\CadCliente.aspx.designer.vb">
+      <DependentUpon>CadCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\CadCliente.aspx.vb">
+      <DependentUpon>CadCliente.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Administracao\CadSocio.aspx.designer.vb">
+      <DependentUpon>CadSocio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\CadSocio.aspx.vb">
+      <DependentUpon>CadSocio.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Administracao\CadTipoDesconto.aspx.designer.vb">
+      <DependentUpon>CadTipoDesconto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\CadTipoDesconto.aspx.vb">
+      <DependentUpon>CadTipoDesconto.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Administracao\DAL\dsCliente.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\DAL\dsDetFat.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsDetFat.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\DAL\dsExtratoMensal.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsExtratoMensal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\DAL\dsFaturamento.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsFaturamento.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\DAL\dsListaDescontos.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsListaDescontos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\DAL\dsNaturDesc.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsNaturDesc.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\DAL\dsSocio.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSocio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\DAL\dsTipoDesconto.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTipoDesconto.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Administracao\Descontos.aspx.designer.vb">
+      <DependentUpon>Descontos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\Descontos.aspx.vb">
+      <DependentUpon>Descontos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Administracao\DescontosValDif.aspx.designer.vb">
+      <DependentUpon>DescontosValDif.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\DescontosValDif.aspx.vb">
+      <DependentUpon>DescontosValDif.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Administracao\detfat.aspx.designer.vb">
+      <DependentUpon>detfat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\detfat.aspx.vb">
+      <DependentUpon>detfat.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Administracao\extratomensal.aspx.designer.vb">
+      <DependentUpon>extratomensal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\extratomensal.aspx.vb">
+      <DependentUpon>extratomensal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Administracao\Faturamento.aspx.designer.vb">
+      <DependentUpon>Faturamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\Faturamento.aspx.vb">
+      <DependentUpon>Faturamento.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Administracao\IncPadraoDesc.aspx.designer.vb">
+      <DependentUpon>IncPadraoDesc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\IncPadraoDesc.aspx.vb">
+      <DependentUpon>IncPadraoDesc.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Administracao\Lista OutraRemuneracao.aspx.designer.vb">
+      <DependentUpon>Lista OutraRemuneracao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\Lista OutraRemuneracao.aspx.vb">
+      <DependentUpon>Lista OutraRemuneracao.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Administracao\ListaClientes.aspx.designer.vb">
+      <DependentUpon>ListaClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\ListaClientes.aspx.vb">
+      <DependentUpon>ListaClientes.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Administracao\ListaDescontos.aspx.designer.vb">
+      <DependentUpon>ListaDescontos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\ListaDescontos.aspx.vb">
+      <DependentUpon>ListaDescontos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Administracao\ListaSocio.aspx.designer.vb">
+      <DependentUpon>ListaSocio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\ListaSocio.aspx.vb">
+      <DependentUpon>ListaSocio.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Administracao\NaturezaDesconto.aspx.designer.vb">
+      <DependentUpon>NaturezaDesconto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\NaturezaDesconto.aspx.vb">
+      <DependentUpon>NaturezaDesconto.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Administracao\nav.aspx.designer.vb">
+      <DependentUpon>nav.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\nav.aspx.vb">
+      <DependentUpon>nav.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Administracao\TipoDesconto.aspx.designer.vb">
+      <DependentUpon>TipoDesconto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\TipoDesconto.aspx.vb">
+      <DependentUpon>TipoDesconto.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Administracao\TipoOutrasRemu.aspx.designer.vb">
+      <DependentUpon>TipoOutrasRemu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\TipoOutrasRemu.aspx.vb">
+      <DependentUpon>TipoOutrasRemu.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Administracao\welcome.aspx.designer.vb">
+      <DependentUpon>welcome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao\welcome.aspx.vb">
+      <DependentUpon>welcome.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Classes\clsacessabanco.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\clscliente.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\clscoddescricao.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\clsConfiguracao.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\clsDescontos.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\clsDespesa.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\clsdetfaturamento.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\clsfaturamento.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\clslancdescontos.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\clslogin.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\clsmoeda.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\clssocio.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\clstipodesconto.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\clstipodespesa.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\colMsgErros.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Desconto.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Email.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\ImagingHandler.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="contato.aspx.designer.vb">
+      <DependentUpon>contato.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contato.aspx.vb">
+      <DependentUpon>contato.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Controles\cbocliente.ascx.designer.vb">
+      <DependentUpon>cbocliente.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\cbocliente.ascx.vb">
+      <DependentUpon>cbocliente.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\cboConfirmação.ascx.designer.vb">
+      <DependentUpon>cboConfirmação.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\cboConfirmação.ascx.vb">
+      <DependentUpon>cboConfirmação.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\cboMes.ascx.designer.vb">
+      <DependentUpon>cboMes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\cboMes.ascx.vb">
+      <DependentUpon>cboMes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\cboSocio.ascx.designer.vb">
+      <DependentUpon>cboSocio.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\cboSocio.ascx.vb">
+      <DependentUpon>cboSocio.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\txtAno.ascx.designer.vb">
+      <DependentUpon>txtAno.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\txtAno.ascx.vb">
+      <DependentUpon>txtAno.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DesejaSair.aspx.designer.vb">
+      <DependentUpon>DesejaSair.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DesejaSair.aspx.vb">
+      <DependentUpon>DesejaSair.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DesejaSairOld.aspx.vb">
+      <DependentUpon>DesejaSairOld.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="emailTeste.aspx.designer.vb">
+      <DependentUpon>emailTeste.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="emailTeste.aspx.vb">
+      <DependentUpon>emailTeste.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Manutencao.aspx.designer.vb">
+      <DependentUpon>Manutencao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manutencao.aspx.vb">
+      <DependentUpon>Manutencao.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="novoLogin.aspx.designer.vb">
+      <DependentUpon>novoLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="novoLogin.aspx.vb">
+      <DependentUpon>novoLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="teste123.aspx.designer.vb">
+      <DependentUpon>teste123.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="teste123.aspx.vb">
+      <DependentUpon>teste123.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DesejaSairOld.aspx.resx">
+      <DependentUpon>DesejaSairOld.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Administracao\AcessoNaoPermitido.aspx" />
+    <Content Include="Administracao\CadCliente.aspx" />
+    <Content Include="Administracao\CadSocio.aspx" />
+    <Content Include="Administracao\CadTipoDesconto.aspx" />
+    <Content Include="Administracao\css\AtlasAdmin.css" />
+    <Content Include="Administracao\css\empresa.htm" />
+    <Content Include="Administracao\css\imaging.css" />
+    <Content Include="Administracao\css\imaging.js" />
+    <Content Include="Administracao\css\imaging_admin.css" />
+    <Content Include="Administracao\css\site_admin.css" />
+    <Content Include="Administracao\css\_vti_cnf\imaging.css" />
+    <Content Include="Administracao\Default.aspx" />
+    <Content Include="Administracao\Descontos.aspx" />
+    <Content Include="Administracao\DescontosValDif.aspx" />
+    <Content Include="Administracao\detfat.aspx" />
+    <Content Include="Administracao\extratomensal.aspx" />
+    <Content Include="Administracao\Faturamento.aspx" />
+    <Content Include="Administracao\Imagens\1pxbg-header.gif" />
+    <Content Include="Administracao\Imagens\1pxbg.gif" />
+    <Content Include="Administracao\Imagens\1pxbgprod.gif" />
+    <Content Include="Administracao\Imagens\1pxtracoprod-br.gif" />
+    <Content Include="Administracao\Imagens\1pxtracoprod.gif" />
+    <Content Include="Administracao\Imagens\areaadminist-tit.gif" />
+    <Content Include="Administracao\Imagens\asca60_arrow_submit.gif" />
+    <Content Include="Administracao\Imagens\barra-mailing.gif" />
+    <Content Include="Administracao\Imagens\bghead.gif" />
+    <Content Include="Administracao\Imagens\bghead_co.gif" />
+    <Content Include="Administracao\Imagens\bgprodbrs1.gif" />
+    <Content Include="Administracao\Imagens\bgprodbrs2.gif" />
+    <Content Include="Administracao\Imagens\bgprodbrs3.gif" />
+    <Content Include="Administracao\Imagens\bg_top.gif" />
+    <Content Include="Administracao\Imagens\bullet.gif" />
+    <Content Include="Administracao\Imagens\bullethover-anim.gif" />
+    <Content Include="Administracao\Imagens\bullethover.gif" />
+    <Content Include="Administracao\Imagens\bulletlink.gif" />
+    <Content Include="Administracao\Imagens\but_1l.gif" />
+    <Content Include="Administracao\Imagens\but_1r.gif" />
+    <Content Include="Administracao\Imagens\but_2l.gif" />
+    <Content Include="Administracao\Imagens\but_2r.gif" />
+    <Content Include="Administracao\Imagens\cabeca_r2_c4.gif" />
+    <Content Include="Administracao\Imagens\checkmrk.gif" />
+    <Content Include="Administracao\Imagens\checkmrk.ico" />
+    <Content Include="Administracao\Imagens\excluir.gif" />
+    <Content Include="Administracao\Imagens\footer-1px.gif" />
+    <Content Include="Administracao\Imagens\head.gif" />
+    <Content Include="Administracao\Imagens\icondoc.gif" />
+    <Content Include="Administracao\Imagens\lock.gif" />
+    <Content Include="Administracao\Imagens\LOCK.ICO" />
+    <Content Include="Administracao\Imagens\lock.ico.gif" />
+    <Content Include="Administracao\Imagens\logo_admin.jpg" />
+    <Content Include="Administracao\Imagens\modelo3.jpg" />
+    <Content Include="Administracao\Imagens\noiticias-tit.gif" />
+    <Content Include="Administracao\Imagens\propaganda.gif" />
+    <Content Include="Administracao\Imagens\store-black.gif" />
+    <Content Include="Administracao\Imagens\tit-atendimento.gif" />
+    <Content Include="Administracao\Imagens\tit-produtos-inv.gif" />
+    <Content Include="Administracao\Imagens\tit-produtos.gif" />
+    <Content Include="Administracao\Imagens\tit-servicos.gif" />
+    <Content Include="Administracao\Imagens\titulo-empresa.gif" />
+    <Content Include="Administracao\Imagens\tracejado-hortzl.gif" />
+    <Content Include="Administracao\Imagens\tracejado-vert.gif" />
+    <Content Include="Administracao\Imagens\tracejado-vert2.gif" />
+    <Content Include="Administracao\Imagens\traco.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\1pxbg-header.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\1pxbg.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\1pxbgprod.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\1pxtracoprod-br.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\1pxtracoprod.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\areaadminist-tit.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\asca60_arrow_submit.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\barra-mailing.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\bghead.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\bghead_co.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\bgprodbrs1.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\bgprodbrs2.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\bgprodbrs3.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\bullet.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\bullethover-anim.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\bullethover.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\bulletlink.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\cabeca_r2_c4.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\excluir.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\footer-1px.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\head.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\icondoc.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\modelo3.jpg" />
+    <Content Include="Administracao\Imagens\_vti_cnf\noiticias-tit.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\propaganda.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\store-black.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\tit-atendimento.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\tit-produtos-inv.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\tit-produtos.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\tit-servicos.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\titulo-empresa.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\tracejado-hortzl.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\tracejado-vert.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\tracejado-vert2.gif" />
+    <Content Include="Administracao\Imagens\_vti_cnf\traco.gif" />
+    <Content Include="Administracao\img\art_core_admin.jpg" />
+    <Content Include="Administracao\img\base.gif" />
+    <Content Include="Administracao\img\bg_minihead.gif" />
+    <Content Include="Administracao\img\bl.gif" />
+    <Content Include="Administracao\img\br.gif" />
+    <Content Include="Administracao\img\cd.gif" />
+    <Content Include="Administracao\img\empty.gif" />
+    <Content Include="Administracao\img\folder.gif" />
+    <Content Include="Administracao\img\folderopen.gif" />
+    <Content Include="Administracao\img\globe.gif" />
+    <Content Include="Administracao\img\ico_extrato.gif" />
+    <Content Include="Administracao\img\ico_mail.gif" />
+    <Content Include="Administracao\img\ico_print.gif" />
+    <Content Include="Administracao\img\ico_user.gif" />
+    <Content Include="Administracao\img\imgfolder.gif" />
+    <Content Include="Administracao\img\join.gif" />
+    <Content Include="Administracao\img\joinbottom.gif" />
+    <Content Include="Administracao\img\line.gif" />
+    <Content Include="Administracao\img\minus.gif" />
+    <Content Include="Administracao\img\minusbottom.gif" />
+    <Content Include="Administracao\img\musicfolder.gif" />
+    <Content Include="Administracao\img\nolines_minus.gif" />
+    <Content Include="Administracao\img\nolines_plus.gif" />
+    <Content Include="Administracao\img\page.gif" />
+    <Content Include="Administracao\img\plus.gif" />
+    <Content Include="Administracao\img\plusbottom.gif" />
+    <Content Include="Administracao\img\question.gif" />
+    <Content Include="Administracao\img\tl.gif" />
+    <Content Include="Administracao\img\tr.gif" />
+    <Content Include="Administracao\img\trash.gif" />
+    <Content Include="Administracao\img\_vti_cnf\base.gif" />
+    <Content Include="Administracao\img\_vti_cnf\cd.gif" />
+    <Content Include="Administracao\img\_vti_cnf\empty.gif" />
+    <Content Include="Administracao\img\_vti_cnf\folder.gif" />
+    <Content Include="Administracao\img\_vti_cnf\folderopen.gif" />
+    <Content Include="Administracao\img\_vti_cnf\globe.gif" />
+    <Content Include="Administracao\img\_vti_cnf\imgfolder.gif" />
+    <Content Include="Administracao\img\_vti_cnf\join.gif" />
+    <Content Include="Administracao\img\_vti_cnf\joinbottom.gif" />
+    <Content Include="Administracao\img\_vti_cnf\line.gif" />
+    <Content Include="Administracao\img\_vti_cnf\minus.gif" />
+    <Content Include="Administracao\img\_vti_cnf\minusbottom.gif" />
+    <Content Include="Administracao\img\_vti_cnf\musicfolder.gif" />
+    <Content Include="Administracao\img\_vti_cnf\nolines_minus.gif" />
+    <Content Include="Administracao\img\_vti_cnf\nolines_plus.gif" />
+    <Content Include="Administracao\img\_vti_cnf\page.gif" />
+    <Content Include="Administracao\img\_vti_cnf\plus.gif" />
+    <Content Include="Administracao\img\_vti_cnf\plusbottom.gif" />
+    <Content Include="Administracao\img\_vti_cnf\question.gif" />
+    <Content Include="Administracao\img\_vti_cnf\trash.gif" />
+    <Content Include="Administracao\IncPadraoDesc.aspx" />
+    <Content Include="Administracao\Lista OutraRemuneracao.aspx" />
+    <Content Include="Administracao\ListaClientes.aspx" />
+    <Content Include="Administracao\ListaDescontos.aspx" />
+    <Content Include="Administracao\ListaSocio.aspx" />
+    <Content Include="Administracao\NaturezaDesconto.aspx" />
+    <Content Include="Administracao\nav.aspx" />
+    <Content Include="Administracao\TipoDesconto.aspx" />
+    <Content Include="Administracao\TipoOutrasRemu.aspx" />
+    <Content Include="Administracao\welcome.aspx" />
+    <Content Include="App_Themes\Default\Default.skin" />
+    <Content Include="contato.aspx" />
+    <Content Include="contato.html" />
+    <Content Include="Controles\cbocliente.ascx" />
+    <Content Include="Controles\cboConfirmação.ascx" />
+    <Content Include="Controles\cboMes.ascx" />
+    <Content Include="Controles\cboSocio.ascx" />
+    <Content Include="Controles\txtAno.ascx" />
+    <Content Include="DesejaSair.aspx" />
+    <Content Include="DesejaSairOld.aspx" />
+    <Content Include="emailTeste.aspx" />
+    <Content Include="empresa.htm" />
+    <Content Include="ImagensAtlas\AtlasNome.png" />
+    <Content Include="ImagensAtlas\ATLAS_LOGO2.jpg" />
+    <Content Include="ImagensAtlas\ATLAS_LOGO_editado.jpg" />
+    <Content Include="ImagensAtlas\but_azul.gif" />
+    <Content Include="ImagensAtlas\ico_contato.jpg" />
+    <Content Include="ImagensAtlas\ico_empresa.jpg" />
+    <Content Include="ImagensAtlas\ico_servicos.jpg" />
+    <Content Include="ImagensAtlas\imagen1.jpg" />
+    <Content Include="ImagensAtlas\imagen2.jpg" />
+    <Content Include="ImagensAtlas\imagen3.jpg" />
+    <Content Include="ImagensAtlas\imagen4.jpg" />
+    <Content Include="ImagensAtlas\imagen5.jpg" />
+    <Content Include="ImagensAtlas\imagen6.jpg" />
+    <Content Include="ImagensAtlas\imagen7.jpg" />
+    <Content Include="imagens\bg_admin.gif" />
+    <Content Include="imagens\bg_construct.gif" />
+    <Content Include="imagens\bg_conteudo.jpg" />
+    <Content Include="imagens\bg_conteudo_down.gif" />
+    <Content Include="imagens\bg_form_login_nome.gif" />
+    <Content Include="imagens\bg_form_login_senha.gif" />
+    <Content Include="imagens\bg_home.gif" />
+    <Content Include="imagens\bg_interno.gif" />
+    <Content Include="imagens\bg_login.jpg" />
+    <Content Include="imagens\bg_nav_admin.gif" />
+    <Content Include="imagens\bg_nav_admin.jpg" />
+    <Content Include="imagens\bg_site.gif" />
+    <Content Include="imagens\bit_azul.gif" />
+    <Content Include="imagens\bit_branco.gif" />
+    <Content Include="imagens\bit_branco.jpg" />
+    <Content Include="imagens\bl.gif" />
+    <Content Include="imagens\br.gif" />
+    <Content Include="imagens\but_1l.gif" />
+    <Content Include="imagens\but_1r.gif" />
+    <Content Include="imagens\but_2l.gif" />
+    <Content Include="imagens\but_2r.gif" />
+    <Content Include="imagens\but_acessar_mails.gif" />
+    <Content Include="imagens\but_adm_emails.gif" />
+    <Content Include="imagens\but_atuacao.jpg" />
+    <Content Include="imagens\but_azul.gif" />
+    <Content Include="imagens\but_excluir.gif" />
+    <Content Include="imagens\but_historia.jpg" />
+    <Content Include="imagens\but_histotia.jpg" />
+    <Content Include="imagens\but_login.gif" />
+    <Content Include="imagens\but_novo.gif" />
+    <Content Include="imagens\but_parceiros.jpg" />
+    <Content Include="imagens\but_pensamento.gif" />
+    <Content Include="imagens\but_peq_cinza.gif" />
+    <Content Include="imagens\but_pesquisar.gif" />
+    <Content Include="imagens\but_selecionar.gif" />
+    <Content Include="imagens\but_verde.gif" />
+    <Content Include="imagens\but_verde_grande.gif" />
+    <Content Include="imagens\canto_nav_admin.jpg" />
+    <Content Include="imagens\down_login.gif" />
+    <Content Include="imagens\ex_bc_imagens.gif" />
+    <Content Include="imagens\HOME1.JPG" />
+    <Content Include="imagens\HOME2.JPG" />
+    <Content Include="imagens\HOME3.JPG" />
+    <Content Include="imagens\ico_alerta.gif" />
+    <Content Include="imagens\ico_contato.jpg" />
+    <Content Include="imagens\ico_empresa.jpg" />
+    <Content Include="imagens\ico_excluir.gif" />
+    <Content Include="imagens\ico_servicos.jpg" />
+    <Content Include="imagens\left_login.gif" />
+    <Content Include="imagens\left_top.gif" />
+    <Content Include="imagens\pensamento_medico.gif" />
+    <Content Include="imagens\right_login.gif" />
+    <Content Include="imagens\right_top.gif" />
+    <Content Include="imagens\round_gray_down_left.gif" />
+    <Content Include="imagens\round_gray_down_right.gif" />
+    <Content Include="imagens\round_gray_top_left.gif" />
+    <Content Include="imagens\round_gray_top_right.gif" />
+    <Content Include="imagens\seta.gif" />
+    <Content Include="imagens\seta_verde.gif" />
+    <Content Include="imagens\shadow_menu.gif" />
+    <Content Include="imagens\site_contruct.gif" />
+    <Content Include="imagens\sua_imagem.gif" />
+    <Content Include="imagens\tab_azul_menu_admin.gif" />
+    <Content Include="imagens\tab_azul_menu_admin.jpg" />
+    <Content Include="imagens\tab_azu_menu_admin.jpg" />
+    <Content Include="imagens\tab_branca_menu_admin.jpg" />
+    <Content Include="imagens\tab_branco_menu_admin.gif" />
+    <Content Include="imagens\tab_laranja_menu_admin.gif" />
+    <Content Include="imagens\tit_artigos.gif" />
+    <Content Include="imagens\tit_banco_imagens.gif" />
+    <Content Include="imagens\tit_login.gif" />
+    <Content Include="imagens\tit_recupera.gif" />
+    <Content Include="imagens\tl.gif" />
+    <Content Include="imagens\top_login.gif" />
+    <Content Include="imagens\tr.gif" />
+    <Content Include="imagens\welcome.jpg" />
+    <Content Include="imagens\_vti_cnf\bg_home.gif" />
+    <Content Include="imagens\_vti_cnf\bg_interno.gif" />
+    <Content Include="imagens\_vti_cnf\but_atuacao.jpg" />
+    <Content Include="imagens\_vti_cnf\but_historia.jpg" />
+    <Content Include="imagens\_vti_cnf\but_histotia.jpg" />
+    <Content Include="imagens\_vti_cnf\but_parceiros.jpg" />
+    <Content Include="imagens\_vti_cnf\HOME1.JPG" />
+    <Content Include="imagens\_vti_cnf\HOME2.JPG" />
+    <Content Include="imagens\_vti_cnf\HOME3.JPG" />
+    <Content Include="imagens\_vti_cnf\pensamento_medico.gif" />
+    <Content Include="imagens\_vti_cnf\seta.gif" />
+    <Content Include="imagens\_vti_cnf\shadow_menu.gif" />
+    <Content Include="imagens\_vti_cnf\socio1.gif" />
+    <Content Include="imagens\_vti_cnf\socio2.gif" />
+    <Content Include="imagens\_vti_cnf\socio3.gif" />
+    <Content Include="Manutencao.aspx" />
+    <Content Include="novoLogin.aspx" />
+    <Content Include="servicos.htm" />
+    <Content Include="teste123.aspx" />
+    <None Include="Administracao\DAL\dsCliente.xsc">
+      <DependentUpon>dsCliente.xsd</DependentUpon>
+    </None>
+    <None Include="Administracao\DAL\dsCliente.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCliente.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Administracao\DAL\dsCliente.xss">
+      <DependentUpon>dsCliente.xsd</DependentUpon>
+    </None>
+    <None Include="Administracao\DAL\dsDetFat.xsc">
+      <DependentUpon>dsDetFat.xsd</DependentUpon>
+    </None>
+    <None Include="Administracao\DAL\dsDetFat.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsDetFat.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Administracao\DAL\dsDetFat.xss">
+      <DependentUpon>dsDetFat.xsd</DependentUpon>
+    </None>
+    <None Include="Administracao\DAL\dsExtratoMensal.xsc">
+      <DependentUpon>dsExtratoMensal.xsd</DependentUpon>
+    </None>
+    <None Include="Administracao\DAL\dsExtratoMensal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsExtratoMensal.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Administracao\DAL\dsExtratoMensal.xss">
+      <DependentUpon>dsExtratoMensal.xsd</DependentUpon>
+    </None>
+    <None Include="Administracao\DAL\dsFaturamento.xsc">
+      <DependentUpon>dsFaturamento.xsd</DependentUpon>
+    </None>
+    <None Include="Administracao\DAL\dsFaturamento.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsFaturamento.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Administracao\DAL\dsFaturamento.xss">
+      <DependentUpon>dsFaturamento.xsd</DependentUpon>
+    </None>
+    <None Include="Administracao\DAL\dsListaDescontos.xsc">
+      <DependentUpon>dsListaDescontos.xsd</DependentUpon>
+    </None>
+    <None Include="Administracao\DAL\dsListaDescontos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsListaDescontos.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Administracao\DAL\dsListaDescontos.xss">
+      <DependentUpon>dsListaDescontos.xsd</DependentUpon>
+    </None>
+    <None Include="Administracao\DAL\dsNaturDesc.xsc">
+      <DependentUpon>dsNaturDesc.xsd</DependentUpon>
+    </None>
+    <None Include="Administracao\DAL\dsNaturDesc.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsNaturDesc.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Administracao\DAL\dsNaturDesc.xss">
+      <DependentUpon>dsNaturDesc.xsd</DependentUpon>
+    </None>
+    <None Include="Administracao\DAL\dsSocio.xsc">
+      <DependentUpon>dsSocio.xsd</DependentUpon>
+    </None>
+    <None Include="Administracao\DAL\dsSocio.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSocio.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Administracao\DAL\dsSocio.xss">
+      <DependentUpon>dsSocio.xsd</DependentUpon>
+    </None>
+    <None Include="Administracao\DAL\dsTipoDesconto.xsc">
+      <DependentUpon>dsTipoDesconto.xsd</DependentUpon>
+    </None>
+    <None Include="Administracao\DAL\dsTipoDesconto.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTipoDesconto.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Administracao\DAL\dsTipoDesconto.xss">
+      <DependentUpon>dsTipoDesconto.xsd</DependentUpon>
+    </None>
+    <None Include="Administracao\img\_notes\art_core_admin.jpg.mno" />
+    <None Include="css\site_conceitual.css.LCK" />
+    <None Include="ImagensAtlas\Thumbs.db" />
+    <None Include="imagens\bg_conteudo.jpg.LCK" />
+    <None Include="imagens\bg_conteudo_down.gif.LCK" />
+    <None Include="imagens\bg_site.gif.LCK" />
+    <None Include="imagens\but_pensamento.gif.LCK" />
+    <None Include="imagens\ex_bc_imagens.gif.LCK" />
+    <None Include="imagens\ico_contato.jpg.LCK" />
+    <None Include="imagens\ico_empresa.jpg.LCK" />
+    <None Include="imagens\ico_servicos.jpg.LCK" />
+    <None Include="imagens\logo_pensamento.gif.LCK" />
+    <None Include="imagens\prof1.jpg.LCK" />
+    <None Include="imagens\prof2.jpg.LCK" />
+    <None Include="imagens\prof3.jpg.LCK" />
+    <None Include="imagens\seta_verde.gif.LCK" />
+    <None Include="imagens\Thumbs.db" />
+    <None Include="imagens\tit_artigos.gif.LCK" />
+    <None Include="imagens\tit_artigos.jpg.LCK" />
+    <None Include="imagens\tit_banco_imagens.gif.LCK" />
+    <None Include="imagens\_notes\banner_home.jpg.mno.LCK" />
+    <None Include="imagens\_notes\bg_admin.gif.mno" />
+    <None Include="imagens\_notes\bg_conteudo.jpg.mno" />
+    <None Include="imagens\_notes\bg_conteudo.jpg.mno.LCK" />
+    <None Include="imagens\_notes\bg_conteudo_down.gif.mno" />
+    <None Include="imagens\_notes\bg_conteudo_down.gif.mno.LCK" />
+    <None Include="imagens\_notes\bg_conteudo_down.jpg.mno.LCK" />
+    <None Include="imagens\_notes\bg_conteudo_home.jpg.mno.LCK" />
+    <None Include="imagens\_notes\bg_conteudo_middle.jpg.mno.LCK" />
+    <None Include="imagens\_notes\bg_conteudo_top.jpg.mno.LCK" />
+    <None Include="imagens\_notes\bg_site.gif.mno" />
+    <None Include="imagens\_notes\bg_site.gif.mno.LCK" />
+    <None Include="imagens\_notes\bit_branco.gif.mno" />
+    <None Include="imagens\_notes\bit_branco.jpg.mno" />
+    <None Include="imagens\_notes\but_excluir.gif.mno" />
+    <None Include="imagens\_notes\but_pensamento.gif.mno" />
+    <None Include="imagens\_notes\but_pensamento.gif.mno.LCK" />
+    <None Include="imagens\_notes\but_peq_cinza.gif.mno" />
+    <None Include="imagens\_notes\but_selecionar.gif.mno" />
+    <None Include="imagens\_notes\but_verde.gif.mno" />
+    <None Include="imagens\_notes\ex_bc_imagens.gif.mno" />
+    <None Include="imagens\_notes\ex_bc_imagens.gif.mno.LCK" />
+    <None Include="imagens\_notes\ico_alerta.gif.mno" />
+    <None Include="imagens\_notes\ico_contato.jpg.mno" />
+    <None Include="imagens\_notes\ico_empresa.jpg.mno" />
+    <None Include="imagens\_notes\ico_servicos.jpg.mno" />
+    <None Include="imagens\_notes\left_top.gif.mno" />
+    <None Include="imagens\_notes\logo_admin.gif.mno" />
+    <None Include="imagens\_notes\logo_pensamento.gif.mno" />
+    <None Include="imagens\_notes\logo_pensamento.gif.mno.LCK" />
+    <None Include="imagens\_notes\prof1.jpg.mno" />
+    <None Include="imagens\_notes\prof2.jpg.mno" />
+    <None Include="imagens\_notes\prof3.jpg.mno" />
+    <None Include="imagens\_notes\prof5.jpg.mno" />
+    <None Include="imagens\_notes\prof6.jpg.mno" />
+    <None Include="imagens\_notes\prof7.jpg.mno" />
+    <None Include="imagens\_notes\prof8.jpg.mno" />
+    <None Include="imagens\_notes\right_top.gif.mno" />
+    <None Include="imagens\_notes\seta_verde.gif.mno" />
+    <None Include="imagens\_notes\seta_verde.gif.mno.LCK" />
+    <None Include="imagens\_notes\tab_azul_menu_admin.gif.mno" />
+    <None Include="imagens\_notes\tab_azul_menu_admin.jpg.mno" />
+    <None Include="imagens\_notes\tab_branca_menu_admin.jpg.mno" />
+    <None Include="imagens\_notes\tab_branco_menu_admin.gif.mno" />
+    <None Include="imagens\_notes\tab_laranja_menu_admin.gif.mno" />
+    <None Include="imagens\_notes\tit_artigos.gif.mno" />
+    <None Include="imagens\_notes\tit_artigos.gif.mno.LCK" />
+    <None Include="imagens\_notes\tit_artigos.jpg.mno" />
+    <None Include="imagens\_notes\tit_artigos.jpg.mno.LCK" />
+    <None Include="imagens\_notes\tit_banco_imagens.gif.mno" />
+    <None Include="imagens\_notes\tit_banco_imagens.gif.mno.LCK" />
+    <None Include="imagens\_notes\topo_nav.jpg.mno.LCK" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2764</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

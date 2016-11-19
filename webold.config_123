@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<configuration>
+	<configSections>
+		<sectionGroup name="Imaging">
+			<section name="MenuFlash" type="ImagingRio2.ImagingConfigHandler"/>
+			<section name="Figuras" type="ImagingRio2.ImagingConfigHandler"/>
+			<section name="Caminhos" type="ImagingRio2.ImagingConfigHandler"/>
+		</sectionGroup>
+		<sectionGroup name="system.web.extensions" type="System.Web.Configuration.SystemWebExtensionsSectionGroup, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35">
+			<sectionGroup name="scripting" type="System.Web.Configuration.ScriptingSectionGroup, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35">
+				<section name="scriptResourceHandler" type="System.Web.Configuration.ScriptingScriptResourceHandlerSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="MachineToApplication"/>
+				<sectionGroup name="webServices" type="System.Web.Configuration.ScriptingWebServicesSectionGroup, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35">
+					<section name="jsonSerialization" type="System.Web.Configuration.ScriptingJsonSerializationSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="Everywhere"/>
+					<section name="profileService" type="System.Web.Configuration.ScriptingProfileServiceSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="MachineToApplication"/>
+					<section name="authenticationService" type="System.Web.Configuration.ScriptingAuthenticationServiceSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="MachineToApplication"/>
+					<section name="roleService" type="System.Web.Configuration.ScriptingRoleServiceSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="MachineToApplication"/></sectionGroup></sectionGroup></sectionGroup><sectionGroup name="businessObjects"><sectionGroup name="crystalReports"><section name="reportMappings" type="CrystalDecisions.Shared.ReportMappingHandler, CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, Custom=null"/></sectionGroup></sectionGroup></configSections>
+	<Imaging>
+		<MenuFlash>
+			<add key="NomeFilmePrincipal" value="flash/menu.swf"/>
+			<add key="NomeFilmeAdministrador" value="flash/menu_adimin.swf"/>
+			<add key="NomeFilmeSocio" value="flash/menu.swf"/>
+			<add key="NomeFilmeContador" value="flash/menu_adimin.swf"/>
+		</MenuFlash>
+		<Figuras>
+			<add key="check" value="imagens/checkmrk.gif"/>
+			<add key="lock" value="imagens/lock.gif"/>
+			<add key="icondoc" value="imagens/icondoc.gif"/>
+		</Figuras>
+		<Caminhos>
+			<add key="paginaIncial" value="default.aspx"/>
+		</Caminhos>
+	</Imaging>
+	<appSettings>
+		<add key="CaminhoFoto" value="Administracao/fotoSocio/"/>
+		<!--<add key="StringConexão" value="Provider=Microsoft.Jet.OLEDB.4.0;Password='';User ID=Admin;Data Source = "/> -->
+		<!--<add key="StringConexão" value="Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=Imaging;Data Source=LOGON;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=LOGON;Use Encryption for Data=False;Tag with column collation when possible=False"/>  -->
+		<add key="StringConexãoLocal" value="Provider=SQLOLEDB.1; workstation id='LOGON-MBB';packet size=4096;integrated security=SSPI;data source='LOGON-MBB';persist security info=True;initial catalog=ImagingFinal"/>
+		<!--<add key="StringConexãoProd" value=" Provider=SQLOLEDB.1;data source=XSQLSV.IMAGINGRIO.COM.BR;initial catalog=imagingrio;persist security info=True;workstation id=LOGON;packet size=4096" />-->
+		<!-- Conexões Apondando para a Dominal 
+		
+		<add key="StringConexãoProd" value=" Provider=SQLOLEDB.1;data source=mssql.dominal.com;initial catalog=logonhost;persist security info=True;workstation id=LOGON;packet size=4096" />
+		<add key="StringConexãoProdSQL" value="workstation id=LOGONMB;packet size=4096;data source='mssql.dominal.com';persist security info=False;initial catalog=logonhost" />
+		-->
+		<!-- Conexões Apontando para  BDNogol -->
+		<!-- <add key="StringConexãoProd" value="Provider=SQLOLEDB.1;Password=q1w2e3r4;Persist Security Info=True;User ID=BDNogol;Initial Catalog=nogol1;Data Source=187.45.210.198" /> -->
+		<!-- Conexões Apontando para o AtlasRadioDiagnóstico -->
+		<!--<add key="StringConexãoProd" value="Provider=SQLOLEDB.1;Password=p0o9i8u7;Persist Security Info=True;User ID=atlas;Initial Catalog=atlas;Data Source=187.45.210.198" /> -->
+		<add key="StringConexãoProd" value="Provider=SQLOLEDB.1;Password=p0o9i8u7;Persist Security Info=True;User ID=atlas;Initial Catalog=atlas;Data Source=187.45.210.198"/>
+		<add key="StringConexãoProdSQL" value="Provider=SQLOLEDB.1;Password=p0o9i8u7;Persist Security Info=True;User ID=atlas;Initial Catalog=atlas;Data Source=187.45.210.198"/>
+	</appSettings>
+	<system.web>
+		<!--  DYNAMIC DEBUG COMPILATION
+          Set compilation debug="true" to insert debugging symbols (.pdb information)
+          into the compiled page. Because this creates a larger file that executes
+          more slowly, you should set this value to true only when debugging and to
+          false at all other times. For more information, refer to the documentation about
+          debugging ASP.NET files.
+    -->
+		<compilation defaultLanguage="vb" debug="true">
+			<!-- <assemblies><add assembly="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304"/><add assembly="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304"/><add assembly="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304"/><add assembly="CrystalDecisions.Web, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304"/></assemblies>-->
+			<assemblies>
+				<add assembly="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304"/>
+				<add assembly="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+				<add assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+				<add assembly="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+				<add assembly="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+				<add assembly="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304"/>
+				<add assembly="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304"/>
+				<add assembly="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304"/>
+				<add assembly="CrystalDecisions.Enterprise.Desktop.Report, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304"/>
+				<add assembly="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304"/>
+				<add assembly="CrystalDecisions.Web, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304"/></assemblies></compilation>
+		<!--  CUSTOM ERROR MESSAGES
+          Set customErrors mode="On" or "RemoteOnly" to enable custom error messages, "Off" to disable. 
+          Add <error> tags for each of the errors you want to handle.
+    -->
+		<!--   <customErrors defaultRedirect="Erro.aspx"
+                    mode="RemoteOnly">
+         <error statusCode="500"
+                redirect="InternalError.htm"/>
+      </customErrors> -->
+		<customErrors mode="Off"/>
+		<!--  AUTHENTICATION 
+          This section sets the authentication policies of the application. Possible modes are "Windows", 
+          "Forms", "Passport" and "None"
+    -->
+		<authentication mode="Forms">
+			<forms name="login" loginUrl="default.aspx"/>
+		</authentication>
+		<!--  AUTHORIZATION 
+          This section sets the authorization policies of the application. You can allow or deny access
+          to application resources by user or role. Wildcards: "*" mean everyone, "?" means anonymous 
+          (unauthenticated) users.
+    -->
+		<authorization>
+			<allow users="*"/>
+			<!-- Allow all users -->
+			<!--  <allow     users="[comma separated list of users]"
+                             roles="[comma separated list of roles]"/>
+                  <deny      users="[comma separated list of users]"
+                             roles="[comma separated list of roles]"/>
+            -->
+		</authorization>
+		<!--  APPLICATION-LEVEL TRACE LOGGING
+          Application-level tracing enables trace log output for every page within an application. 
+          Set trace enabled="true" to enable application trace logging.  If pageOutput="true", the
+          trace information will be displayed at the bottom of each page.  Otherwise, you can view the 
+          application trace log by browsing the "trace.axd" page from your web application
+          root. 
+    -->
+		<trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+		<!--  SESSION STATE SETTINGS
+          By default ASP.NET uses cookies to identify which requests belong to a particular session. 
+          If cookies are not available, a session can be tracked by adding a session identifier to the URL. 
+          To disable cookies, set sessionState cookieless="true".
+    -->
+		<sessionState mode="InProc" stateConnectionString="tcpip=127.0.0.1:42424" sqlConnectionString="data source=127.0.0.1;user id=sa;password=" cookieless="false" timeout="20"/>
+		<!--  GLOBALIZATION
+          This section sets the globalization settings of the application. 
+    -->
+		<globalization requestEncoding="utf-8" responseEncoding="utf-8"/>
+		<xhtmlConformance mode="Legacy"/>
+		<pages>
+			<namespaces>
+				<add namespace="Microsoft.VisualBasic"/>
+				<add namespace="System.Data"/>
+				<add namespace="System.Drawing"/></namespaces>
+			<controls>
+				<add tagPrefix="asp" namespace="System.Web.UI" assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+				<add tagPrefix="asp" namespace="System.Web.UI.WebControls" assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/></controls></pages>
+		<httpHandlers>
+			<remove verb="*" path="*.asmx"/>
+			<add verb="*" path="*.asmx" validate="false" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+			<add verb="*" path="*_AppService.axd" validate="false" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+			<add verb="GET,HEAD" path="ScriptResource.axd" validate="false" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/><add verb="GET" path="CrystalImageHandler.aspx" type="CrystalDecisions.Web.CrystalImageHandler, CrystalDecisions.Web, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304"/></httpHandlers>
+		<httpModules>
+			<add name="ScriptModule" type="System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/></httpModules></system.web>
+	<system.codedom>
+		<compilers>
+			<compiler language="c#;cs;csharp" extension=".cs" type="Microsoft.CSharp.CSharpCodeProvider,System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" warningLevel="4">
+				<providerOption name="CompilerVersion" value="v3.5"/>
+				<providerOption name="WarnAsError" value="false"/></compiler>
+			<compiler language="vb;vbs;visualbasic;vbscript" extension=".vb" type="Microsoft.VisualBasic.VBCodeProvider, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" warningLevel="4" compilerOptions="/define:Debug=True /define:Trace=True /imports:Microsoft.VisualBasic,System,System.Collections,System.Configuration,System.Data,System.Drawing,System.Web,System.Web.UI,System.Web.UI.HtmlControls,System.Web.UI.WebControls /define:Debug=True /define:Trace=True /imports:Microsoft.VisualBasic,System,System.Collections,System.Configuration,System.Data,System.Drawing,System.Web,System.Web.UI,System.Web.UI.HtmlControls,System.Web.UI.WebControls /define:Debug=True /define:Trace=True /imports:Microsoft.VisualBasic,System,System.Collections,System.Configuration,System.Data,System.Drawing,System.Web,System.Web.UI,System.Web.UI.HtmlControls,System.Web.UI.WebControls">
+				<providerOption name="CompilerVersion" value="v3.5"/>
+				<providerOption name="OptionInfer" value="true"/>
+				<providerOption name="WarnAsError" value="false"/></compiler></compilers></system.codedom>
+	<system.webServer>
+		<validation validateIntegratedModeConfiguration="false"/>
+		<modules>
+			<remove name="ScriptModule"/>
+			<add name="ScriptModule" preCondition="managedHandler" type="System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/></modules>
+		<handlers>
+			<remove name="WebServiceHandlerFactory-Integrated"/>
+			<remove name="ScriptHandlerFactory"/>
+			<remove name="ScriptHandlerFactoryAppServices"/>
+			<remove name="ScriptResource"/>
+			<add name="ScriptHandlerFactory" verb="*" path="*.asmx" preCondition="integratedMode" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+			<add name="ScriptHandlerFactoryAppServices" verb="*" path="*_AppService.axd" preCondition="integratedMode" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+			<add name="ScriptResource" verb="GET,HEAD" path="ScriptResource.axd" preCondition="integratedMode" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/><add name="CrystalImageHandler.aspx_GET" verb="GET" path="CrystalImageHandler.aspx" type="CrystalDecisions.Web.CrystalImageHandler, CrystalDecisions.Web, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" preCondition="integratedMode"/></handlers></system.webServer>
+	<runtime>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly>
+				<assemblyIdentity name="System.Web.Extensions" publicKeyToken="31bf3856ad364e35"/>
+				<bindingRedirect oldVersion="1.0.0.0-1.1.0.0" newVersion="3.5.0.0"/></dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="System.Web.Extensions.Design" publicKeyToken="31bf3856ad364e35"/>
+				<bindingRedirect oldVersion="1.0.0.0-1.1.0.0" newVersion="3.5.0.0"/></dependentAssembly></assemblyBinding></runtime><businessObjects><crystalReports><reportMappings><add reportName="{EAF4D5C2-47F9-488F-91DD-AFE129244185}.rpt" path="Administracao\{EAF4D5C2-47F9-488F-91DD-AFE129244185}.rpt"/><add reportName="{F172DDC4-DC74-4856-9A6E-470FBAEF3A03}.rpt" path="Administracao\{F172DDC4-DC74-4856-9A6E-470FBAEF3A03}.rpt"/><add reportName="ListaClientes.rpt" path="Administracao\ListaClientes.rpt"/><add reportName="ListaClientes.rpt" path="Administracao\Relatórios\ListaClientes.rpt"/></reportMappings></crystalReports></businessObjects></configuration>

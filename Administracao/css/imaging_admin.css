@@ -1,0 +1,141 @@
+/*Globals*/
+ *{margin:0;padding:0;
+  
+
+ }
+img {display: block;border:0;}
+a:visited {text-decoration: none;}
+a:link {text-decoration: none;}
+a:hover{text-decoration: underline;}
+a:active {text-decoration: none;}
+
+body{ background-color:#A5A5A5; margin:0; text-decoration:none; padding:0; text-align:center; font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;font-size:70%;}
+
+
+body.nav{ background-image:url(../Imagens/bg_top.gif); background-repeat:repeat-x;}
+
+#wrap{ text-align:center;}
+
+
+/*Topo Navegação*/
+#topo{ text-align:left; margin-top:10px; width:100%; padding-right:50px;    background-color:#666666;}
+/*#topo h1{ width:170px; font-size:16px; float:left; background-image:url(../Imagens/logo_admin.jpg); background-repeat:no-repeat; height:95px; background-position:center 0; overflow:visible;}*/ 
+
+#topo h1{ width:170px; font-size:16px; float:left; background-image:url(../../ImagensAtlas/ATLAS_LOGO2.jpg); background-repeat:no-repeat; height:120px; background-position:center 0; overflow:visible;}
+
+
+#topo div#navegacao{margin-top:10px; margin-left:200px;}
+div#navegacao{ }
+#navegacao ul{list-style-type:none; margin:0; padding:0;}
+#navegacao li{list-style-type:none; margin:0; padding:0;}
+#navegacao ul li{float:left; width:90px;margin-right:10px;}
+#navegacao ul li ul li{ float:none; margin:0; padding:0;}
+#navegacao ul li ul li a{ font-size:10px; font-weight:bold; padding-left:5px; display:block; color:#FFFFFF; }
+#navegacao ul li ul li a:hover{ color:#7799BB; text-decoration:none; display:block; background-color:#FFFFFF; font-size:10px; font-weight:bold; padding-left:5px;}
+
+.tit{ text-transform: uppercase; font-weight:bold; color:#FFFFFF; text-decoration:none; font-size:12px;}
+.tit:hover{ text-decoration:none;}
+
+/*Conteúdo Cantos Arredondados*/
+#conteudo{ text-align:left;}
+.bl {background: url(../img/bl.gif) 0 100% no-repeat #fff; width: 96%} 
+.br {background: url(../img/br.gif) 100% 100% no-repeat} 
+.tl {background: url(../img/tl.gif) 0 0 no-repeat} 
+.tr {background: url(../img/tr.gif) 100% 0 no-repeat; padding:10px} 
+.clear {width:100%;font-size: 1px;line-height: 1px;height:1px;clear:both;}
+
+/*Welcome*/
+div#art_welcome{float:left;}
+#nav_welcome{float:left; margin-left:20px; color:#698FB4; width:300px;}
+#nav_welcome a, h3{color:#FEA723;}
+#nav_welcome li{padding-left:90px; padding-top:10px;background-repeat: no-repeat; background-position: 0 .5em; margin-bottom:10px; border-bottom:1px dashed #C5D3E0; height:90px;}
+#nav_welcome li#mail{ background-image:url(../img/ico_mail.gif);}
+#nav_welcome li#extrato{ background-image:url(../img/ico_extrato.gif);}
+#nav_welcome li#user{ background-image:url(../img/ico_user.gif);}
+
+
+/*Mini Head */
+div#minihead{ background-color:#E9E9E9; height:30px;}
+div#minihead #print {float:right; margin-top:3px; margin-right:5px;}
+div#minihead #nav_extru{ float:left; font-size:12px; color: #698FB6; font-weight:bold; padding-top:5px; padding-left:5px;}
+
+
+#conteudo h2{ margin-top:15px; border-bottom:1px solid color:#FEA723;color:#FEA723; font-size:22px; letter-spacing: -1px; padding-left:5px; }
+.textoazul 	{font-size: 12px;color: #336699;}
+.textoazul_grande {font-size:18px;color: #FEA723; font-weight: bold; letter-spacing:-1px;}
+
+
+/*Tabela Descontos */
+#tb_descontos th{ font-size:12px; color: #965A01; font-weight:bold; padding-left:5px;text-align:left; height:25px; margin-top:20px; background-color:#FFE6BF; font-weight:normal;}
+
+/*Tabelas Notas Fiscais */
+.header_tbl{ font-size:12px; color:#ffffff; font-weight:bold;text-align:center; background-color:#FEA723; border-left-width: 2px;border-left-style: solid;border-left-color: #FFFFFF;}
+.header_tbr{ font-size:12px; color:#ffffff; font-weight:bold;text-align:center; background-color:#FEA723; border-right-width: 2px;border-right-style: solid;border-right-color: #FFFFFF;}
+#grdFaturamento a, #grdDetFat a, #grdImpostos a, #grd a, #grdCliente a{ color:#965A01; text-decoration:none;}
+#grdFaturamento a:hover, #grdDetFat a:hover, #grdImpostos a:hover, #grd a:hover, #grdCliente a:hover{color:#965A01; text-decoration:underline;}
+.padleft10{ padding-left:10px;}
+.padright10{ padding-right:10px;}
+
+
+/*Botões Tabelas*/
+.butlink_r a{display: block; border: 1px solid; border-color: #aaa #000 #000 #aaa; width: 8em; background:#990000;font-family:"Trebuchet MS", Arial; font-weight:bold;font-size:10px;text-align:center;height:18px;padding-top:2px;color:#FFFFFF; text-decoration:none; } 
+.butlink_r a:hover { position: relative; top: 1px; left: 1px; border-color: #000 #aaa #aaa #000; text-decoration:none;}
+.butlink_o a{display: block; border: 1px solid; border-color: #aaa #000 #000 #aaa; width: 12em; background: #FF6600;font-family:"Trebuchet MS", Arial; font-weight:bold;font-size:10px;text-align:center;height:18px;padding-top:2px;color:#FFFFFF; text-decoration:none; } 
+.butlink_o a:hover { position: relative; top: 1px; left: 1px; border-color: #000 #aaa #aaa #000;}
+.butlink_g a{display: block; border: 1px solid; border-color: #aaa #000 #000 #aaa; width: 12em; background: #009933;font-family:"Trebuchet MS", Arial; font-weight:bold;font-size:10px;text-align:center;height:18px;padding-top:2px;color:#FFFFFF; text-decoration:none; } 
+.butlink_g a:hover { position: relative; top: 1px; left: 1px; border-color: #000 #aaa #aaa #000;}
+.butlink_b a{display: block; border: 1px solid; border-color: #aaa #000 #000 #aaa; width: 12em; background: #3399FF;font-family:"Trebuchet MS", Arial; font-weight:bold;font-size:10px;text-align:center;height:18px;padding-top:2px;color:#FFFFFF; text-decoration:none; } 
+.butlink_b a:hover { position: relative; top: 1px; left: 1px; border-color: #000 #aaa #aaa #000;}
+
+/*Botões Despesas*/
+.botao_1r		{background-image: url(../imagens/but_1r.gif);height: 32px;width: 47px;border: none;cursor: hand;}
+.botao_1l		{background-image: url(../imagens/but_1l.gif);height: 32px;width: 47px;border: none;cursor: hand;}
+.botao_2r		{background-image: url(../imagens/but_2r.gif);height: 32px;width: 47px;border: none;cursor: hand;}
+.botao_2l		{background-image: url(../imagens/but_2l.gif);height: 32px;width: 47px;border: none;cursor: hand;}
+
+
+
+
+
+/* Old Styles*/
+.bghome 			{background-color: #FFFFFF;background-image: url(../imagens/bg_home.gif);background-repeat: repeat-x;background-position: 0px 11px}
+.bginterno 			{background-color: #FFFFFF;background-image: url(../imagens/bg_interno.gif);background-repeat: repeat-x;background-position: 0px 11px;}
+.bgadmin 			{background-color: #FFFFFF;background-image: url(../imagens/bg_admin.gif);background-repeat: repeat-x;background-position: 0px 11px; padding-top: 10px}
+.bghomeconst 		{background-color: #FFFFFF;background-image: url(../imagens/bg_construct.gif);background-repeat: repeat-x;background-position: 0px 100px;}
+/* Textos*/
+.textoalerta		{font-size: 12px;color: #FF0000;}
+.textocinza 		{font-size: 12px;color: #333333;}
+.textoazul_peq11 	{font-size: 11px;color: #336699; text-decoration: none;}
+.textoazul_peq 		{font-size: 10px;color: #336699; text-decoration: none;}
+.textoazul_peq:hover{font-size: 10px;color: #336699; text-decoration: underline;}
+.textocinza_pad10	{font-size: 12px;color: #333333; text-decoration: none;padding-left: 10px;}
+.textoazul_pad10	{font-size: 12px;color: #4583C0; text-decoration: none;padding-left: 10px;font-weight: bold;border-left-width: 2px;border-left-style: solid;border-left-color: #FFFFFF;}
+.textoazul_pad10:link	{font-size: 12px;color: #4583C0; text-decoration: none;padding-left: 10px;font-weight: bold;border-left-width: 2px;border-left-style: solid;border-left-color: #FFFFFF;}
+.textoazul_pad10:visited{font-size: 12px;color: #4583C0; text-decoration: none;padding-left: 10px;font-weight: bold;border-left-width: 2px;border-left-style: solid;border-left-color: #FFFFFF;}
+.textoazul_pad10:hover	{font-size: 12px;color: #4583C0; text-decoration: underline;padding-left: 10px;font-weight: bold;border-left-width: 2px;border-left-style: solid;border-left-color: #FFFFFF;}
+.textoazul_pad10:active	{font-size: 12px;color: #4583C0; text-decoration: none;padding-left: 10px;font-weight: bold;border-left-width: 2px;border-left-style: solid;border-left-color: #FFFFFF;}
+.textoazul_pad0		{font-size: 12px;color: #4583C0; text-decoration: none;font-weight: bold;border-left-width: 2px;border-left-style: solid;border-left-color: #FFFFFF;}
+/* Paddings*/
+.padright20 		{padding-right: 20px;}
+.padleft20			{padding-left: 20px;}
+.padleft10			{padding-left: 10px;}
+.padtop 			{padding-top: 1px;}
+.padtop20 			{padding-top: 20px;}
+
+/* botoes*/
+.ico_excluir		{background-image: url(../IMAGENS/ico_excluir.gif);height: 16px;width: 13px;border: none;cursor: hand;background-repeat: no-repeat;background-position: center center;}
+.botao_peq_cinza 	{background-image: url(../IMAGENS/but_peq_cinza.gif);height: 25px;width: 77px;border: none;font-weight: bold;cursor: hand;}
+.botaoselec		 	{background-image: url(../imagens/but_selecionar.gif);height: 31px;width: 97px;border: none;font-weight: bold;cursor: hand;}
+.botaopesquisar	 	{background-image: url(../imagens/but_pesquisar.gif);height: 31px;width: 97px; font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #2D5986; border: none;font-weight: bold;cursor: hand;}
+.botaonovo		 	{background-image: url(../imagens/but_novo.gif);height: 31px;width: 97px;border: none;font-weight: bold;cursor: hand;}
+.botaoexcluir	 	{font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #666666; text-decoration: none;background-image: url(../IMAGENS/but_excluir.gif);height: 25px;width: 77px;border: none;font-weight: bold;cursor: hand;background-repeat: no-repeat;}
+.botao_grande		{background-image: url(../../IMAGENS/but_grande.gif);height: 31px;width: 160px;border: none;font-weight: bold;cursor: hand;}
+.botao_azul			{background-image: url(../../IMAGENS/but_azul.gif);height: 31px;width: 97px; font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #2D5986; border: none;font-weight: bold;cursor: hand;}
+.botaologin 		{background-image: url(../../IMAGENS/but_login_adimin.jpg);height: 31px;width: 77px;border: none;font-weight: bold;cursor: hand;}
+.botao_excluir	 	{background-image: url(../IMAGENS/but_excluir.gif);height: 23px;width: 75px;border: none;font-weight: bold;cursor: hand;font-family: Arial, Helvetica, sans-serif;font-size: 11px;color: #cccccc; background-repeat:no-repeat;text-decoration: none;}
+/* form login*/
+.form_usuario		{background-image: url(/IMAGENS/bg_form_login_nome.gif); height:16px; width:139px; border: 0px none; font-family: Arial, Helvetica, sans-serif;font-size: 10px;color: #336699; padding-left: 50px;}
+.form_senha			{background-image: url(/IMAGENS/bg_form_login_senha.gif); height:16px; width:139px; border: 0px none; font-family: Arial, Helvetica, sans-serif;font-size: 10px;color: #336699; padding-left: 50px;}
+.but_login 			{background-image: url(/IMAGENS/but_login.gif);height: 23px;width: 84px;border: none;font-weight: bold;cursor: hand;}
+.botaoverde			{background-image: url(../imagens/but_verde.gif);height: 31px;width: 97px;border: none;font-weight: bold;cursor: hand;}
+.botao_verde_gra	{background-image: url(../imagens/but_verde_grande.gif);height: 31px;width: 149px;border: none;font-weight: bold;cursor: hand;}

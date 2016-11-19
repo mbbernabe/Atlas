@@ -1,0 +1,56 @@
+a:link {text-decoration: none;}
+a:hover{text-decoration: underline;}
+a:active{text-decoration: none;}
+a:visited{text-decoration: none;}
+/* Backgrounds*/
+.bghome 			{background-color: #FFFFFF;background-image: url(../imagens/bg_home.gif);background-repeat: repeat-x;background-position: 0px 11px}
+.bginterno 			{background-color: #FFFFFF;background-image: url(../imagens/bg_interno.gif);background-repeat: repeat-x;background-position: 0px 11px;}
+.bgadmin 			{background-color: #FFFFFF;background-image: url(../imagens/bg_admin.gif);background-repeat: repeat-x;background-position: 0px 11px; padding-top: 10px}
+.bghomeconst 		{background-color: #FFFFFF;background-image: url(../imagens/bg_construct.gif);background-repeat: repeat-x;background-position: 0px 100px;}
+/* Textos*/
+.textoalerta		{font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #FF0000;}
+.textoazul 			{font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #336699;}
+.textoazul:link		{font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #336699;}
+.textoazul:visited	{font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #336699;}
+.textoazul:hover	{font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #336699;text-decoration: underline;}
+.textoazul:active	{font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #336699;}
+.textocinza 		{font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #333333;}
+.textoazul_peq11 	{font-family: Arial, Helvetica, sans-serif;font-size: 11px;color: #336699; text-decoration: none;}
+.textoazul_peq 		{font-family: Arial, Helvetica, sans-serif;font-size: 10px;color: #336699; text-decoration: none;}
+.textoazul_peq:hover{font-family: Arial, Helvetica, sans-serif;font-size: 10px;color: #336699; text-decoration: underline;}
+.textoazul_grande 	{font-family: Arial, Helvetica, sans-serif;font-size: 18px;color: #336699; font-weight: bold;}
+.textocinza_pad10	{font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #333333; text-decoration: none;padding-left: 10px;}
+.textoazul_pad10	{font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #4583C0; text-decoration: none;padding-left: 10px;font-weight: bold;border-left-width: 2px;border-left-style: solid;border-left-color: #FFFFFF;}
+.textoazul_pad10:link	{font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #4583C0; text-decoration: none;padding-left: 10px;font-weight: bold;border-left-width: 2px;border-left-style: solid;border-left-color: #FFFFFF;}
+.textoazul_pad10:visited{font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #4583C0; text-decoration: none;padding-left: 10px;font-weight: bold;border-left-width: 2px;border-left-style: solid;border-left-color: #FFFFFF;}
+.textoazul_pad10:hover	{font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #4583C0; text-decoration: underline;padding-left: 10px;font-weight: bold;border-left-width: 2px;border-left-style: solid;border-left-color: #FFFFFF;}
+.textoazul_pad10:active	{font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #4583C0; text-decoration: none;padding-left: 10px;font-weight: bold;border-left-width: 2px;border-left-style: solid;border-left-color: #FFFFFF;}
+.textoazul_pad0		{font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #4583C0; text-decoration: none;font-weight: bold;border-left-width: 2px;border-left-style: solid;border-left-color: #FFFFFF;}
+/* Paddings*/
+.padright20 		{padding-right: 20px;}
+.padleft20			{padding-left: 20px;}
+.padleft10			{padding-left: 10px;}
+.padtop 			{padding-top: 1px;}
+.padtop20 			{padding-top: 20px;}
+
+/* botoes*/
+.ico_excluir		{background-image: url(../IMAGENS/ico_excluir.gif);height: 16px;width: 13px;border: none;cursor: hand;background-repeat: no-repeat;background-position: center center;}
+.botao_peq_cinza 	{background-image: url(../IMAGENS/but_peq_cinza.gif);height: 25px;width: 77px;border: none;font-weight: bold;cursor: hand;}
+.botaoselec		 	{background-image: url(../imagens/but_selecionar.gif);height: 31px;width: 97px;border: none;font-weight: bold;cursor: hand;}
+.botaopesquisar	 	{background-image: url(../imagens/but_pesquisar.gif);height: 31px;width: 97px; font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #2D5986; border: none;font-weight: bold;cursor: hand;}
+.botaonovo		 	{background-image: url(../imagens/but_novo.gif);height: 31px;width: 97px;border: none;font-weight: bold;cursor: hand;}
+.botaoexcluir	 	{font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #666666; text-decoration: none;background-image: url(../IMAGENS/but_excluir.gif);height: 25px;width: 77px;border: none;font-weight: bold;cursor: hand;background-repeat: no-repeat;}
+.botao_grande		{background-image: url(../../IMAGENS/but_grande.gif);height: 31px;width: 160px;border: none;font-weight: bold;cursor: hand;}
+.botao_azul			{background-image: url(../../IMAGENS/but_azul.gif);height: 31px;width: 97px; font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #2D5986; border: none;font-weight: bold;cursor: hand;}
+.botaologin 		{background-image: url(../../IMAGENS/but_login_adimin.jpg);height: 31px;width: 77px;border: none;font-weight: bold;cursor: hand;}
+.botao_excluir	 	{background-image: url(../IMAGENS/but_excluir.gif);height: 23px;width: 75px;border: none;font-weight: bold;cursor: hand;font-family: Arial, Helvetica, sans-serif;font-size: 11px;color: #cccccc; background-repeat:no-repeat;text-decoration: none;}
+/* form login*/
+.form_usuario		{background-image: url(/IMAGENS/bg_form_login_nome.gif); height:16px; width:139px; border: 0px none; font-family: Arial, Helvetica, sans-serif;font-size: 10px;color: #336699; padding-left: 50px;}
+.form_senha			{background-image: url(/IMAGENS/bg_form_login_senha.gif); height:16px; width:139px; border: 0px none; font-family: Arial, Helvetica, sans-serif;font-size: 10px;color: #336699; padding-left: 50px;}
+.but_login 			{background-image: url(/IMAGENS/but_login.gif);height: 23px;width: 84px;border: none;font-weight: bold;cursor: hand;}
+.botaoverde			{background-image: url(../imagens/but_verde.gif);height: 31px;width: 97px;border: none;font-weight: bold;cursor: hand;}
+.botao_verde_gra	{background-image: url(../imagens/but_verde_grande.gif);height: 31px;width: 149px;border: none;font-weight: bold;cursor: hand;}
+.botao_azul_1r		{background-image: url(../imagens/but_1r.gif);height: 32px;width: 47px;border: none;cursor: hand;}
+.botao_azul_1l		{background-image: url(../imagens/but_1l.gif);height: 32px;width: 47px;border: none;cursor: hand;}
+.botao_azul_2r		{background-image: url(../imagens/but_2r.gif);height: 32px;width: 47px;border: none;cursor: hand;}
+.botao_azul_2l		{background-image: url(../imagens/but_2l.gif);height: 32px;width: 47px;border: none;cursor: hand;}

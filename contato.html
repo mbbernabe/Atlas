@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Atlas Radiodiagnóstico</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<link href="App_Themes/Default/site_conceitual.css" rel="stylesheet" type="text/css" />
+		<script src="Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+		<script type="text/javascript" language="JavaScript">
+		 function validarEmail(param){
+			if (!checkEmail(param)){
+			   alert("Email inválido.");
+			   document.forms[0].email.focus();			
+			}
+		 } 
+		  function validarFormTela(){
+		    var mensagem = ""
+			var field 
+			var fieldFocus
+			var ret = true
+			var form
+			
+			form = document.forms[0]
+			
+			//Nome
+			field = document.getElementById("nome");			
+			if (!validarRequerido(field.value)){
+//			   alert("Nome é obregatório");
+			   mensagem = mensagem + " - Nome é obrigatório. \n"
+			   if (fieldFocus == undefined){
+			    fieldFocus = field;
+			   }
+			   ret=false;
+			}	
+		
+           //Email
+			field = document.getElementById("email");			
+			if (!validarRequerido(field.value)){
+			   //alert("O email é obrigatório");
+			   mensagem = mensagem + " - O Email é obrigatório. \n"
+   			   if (fieldFocus == undefined){
+			    fieldFocus = field;
+			   }
+			   ret=false;
+			}		
+
+        
+           //Mensagem
+			field = document.getElementById("mensagem");			
+			if (!validarRequerido(field.value)){
+			   //alert("A Mensagem é obrigatória");
+			   mensagem = mensagem + " - A Mensagem é obrigatória. \n"
+
+   			   if (fieldFocus == undefined){
+			    fieldFocus = field;
+			   }
+			   ret=false;
+			}			    
+			  
+			   if (fieldFocus != undefined){
+			   mensagem = " Os seguintes problemas  foram encontrados ao processar a página: \n\n" + mensagem
+			   alert(mensagem)
+			   fieldFocus.focus()				
+			   } 
+			   else{
+			     form.submit();
+			   }
+  		   }
+		  
+		  function validarRequerido(valor){
+		     var isValid = true
+			  if (trim(valor).length == 0) {
+				  isValid = false;
+				}
+			   
+			  return isValid;			 
+			  
+			  
+	    } //  function validarRequerido
+
+		
+		</script>
+		<script type="text/javascript" LANGUAGE="JavaScript">
+
+
+<!-- Begin
+var n;
+var p;
+var p1;
+function ValidatePhone(){
+var campoTel
+campoTel = document.getElementById("tel")
+
+p=p1.value
+if(p.length==2){
+	//d10=p.indexOf('(')
+	pp=p;
+	d4=p.indexOf('(')
+	d5=p.indexOf(')')
+	if(d4==-1){
+		pp="("+pp;
+	}
+	if(d5==-1){
+		pp=pp+")";
+	}
+	//pp="("+pp+")";
+	campoTel.value="";
+	campoTel.value=pp;
+}
+if(p.length>3){
+	d1=p.indexOf('(')
+	d2=p.indexOf(')')
+	if (d2==-1){
+		l30=p.length;
+		p30=p.substring(0,4);
+		//alert(p30);
+		p30=p30+")"
+		p31=p.substring(4,l30);
+		pp=p30+p31;
+		//alert(p31);
+		campoTel.value="";
+		campoTel.value=pp;
+	}
+	}
+if(p.length>5){
+	p11=p.substring(d1+1,d2);
+	if(p11.length>3){
+	p12=p11;
+	l12=p12.length;
+	l15=p.length
+	//l12=l12-3
+	p13=p11.substring(0,3);
+	p14=p11.substring(3,l12);
+	p15=p.substring(d2+1,l15);
+	campoTel.value="";
+	pp="("+p13+")"+p14+p15;
+	campoTel.value=pp;
+	//obj1.value="";
+	//obj1.value=pp;
+	}
+	l16=p.length;
+	p16=p.substring(d2+1,l16);
+	l17=p16.length;
+	if(l17>4&&p16.indexOf('-')==-1){
+		p17=p.substring(d2+1,d2+5);
+		p18=p.substring(d2+5,l16);
+		p19=p.substring(0,d2+1);
+		//alert(p19);
+	pp=p19+p17+"-"+p18;
+	campoTel.value="";
+	campoTel.value=pp;
+	//obj1.value="";
+	//obj1.value=pp;
+	}
+}
+//}
+setTimeout(ValidatePhone,100)
+}
+function getIt(m){
+n=m.name;
+//p1=document.forms[0].elements[n]
+p1=m
+ValidatePhone()
+}
+function testphone(obj1){
+p=obj1.value
+//alert(p)
+p=p.replace("(","")
+p=p.replace(")","")
+p=p.replace("-","")
+p=p.replace("-","")
+//alert(isNaN(p))
+if (isNaN(p)==true){
+alert("Check phone");
+return false;
+}
+}
+//  End -->
+		</script>
+	</head>
+	<body>
+		<div id="main">
+			<div id="topo">
+				<img alt="logo" src="ImagensAtlas/ATLAS_LOGO2.jpg" /> <img alt="Atlas Serviços de Radiodiagnóstico" src="ImagensAtlas/AtlasNome.png" />
+			</div>
+			<div id="nav">
+				<a href="default.aspx">Home</a>&nbsp;|&nbsp; <a href="empresa.htm">Empresa</a>&nbsp;|&nbsp;
+				<a href="servicos.htm">Servi&ccedil;os</a>&nbsp;|&nbsp; <a href="contato.html">Contato</a>&nbsp;|&nbsp;
+				<a href="novoLogin.aspx">Login</a><br />
+			</div>
+			<div style=" background-color:White; width:100%; ">
+				<div id="mininav"><img src="imagens/contato.jpg" 
+                        style="width: 230px; height: 220px" />
+				</div>
+				<div id="form">
+					<h1>Fale conosco</h1>
+					<div style="width:350px;">
+						No intuito de estreitar ainda mais o nosso relacionamento, por favor preencha o 
+						formulário abaixo com seus dados, para que possamos entrar em contato o mais 
+						breve possível. Com este contato inicial, podemos agendar uma reunião e 
+						discutir soluções para a sua empresa.
+					</div>
+					<form ACTION="http://form.ultramail.com.br/" METHOD="post" ID="Form1">
+						<input TYPE="hidden" NAME="assunto" SIZE="24" Value="Contato através do site" ID="Text3"><br />
+						<label for="nome">Nome:</label>
+						<input name="nome" type="text" class="textocinza" id="nome" size="80" /><br />
+						<label for="empresa">Empresa:</label>
+						<input name="empresa" type="text" class="textocinza" id="empresa" size="80" /><br />
+						Entre somente com números para informar o ddd e o telefone ex: 2129723451<br />
+						<label for="telefone">Telefone:</label>
+						<input name="tel" type="text" class="textocinza" id="tel" size="9" maxlength="13" onclick="javascript:getIt(this)" /><br />
+						<label for="email">Email:</label>
+						<input name="email" type="text" class="textocinza" id="email" size="80" onBlur="javascript:validarEmail(this.value);" /><br />
+						<label for="cidade">Cidade:</label>
+						<input name="cidade" type="text" class="textocinza" id="cidade" size="60" /><br />
+						<label for="Estado">Estado:</label>
+						<select name="estado" class="textocinza" id="estado">
+							<option value='' selected>--UF--</option>
+							<option value='AC'>AC</option>
+							<option value='AL'>AL</option>
+							<option value='AM'>AM</option>
+							<option value='AP'>AP</option>
+							<option value='BA'>BA</option>
+							<option value='CE'>CE</option>
+							<option value='DF'>DF</option>
+							<option value='ES'>ES</option>
+							<option value='GO'>GO</option>
+							<option value='MA'>MA</option>
+							<option value='MG'>MG</option>
+							<option value='MS'>MS</option>
+							<option value='MT'>MT</option>
+							<option value='PA'>PA</option>
+							<option value='PB'>PB</option>
+							<option value='PE'>PE</option>
+							<option value='PI'>PI</option>
+							<option value='PR'>PR</option>
+							<option value='RJ'>RJ</option>
+							<option value='RN'>RN</option>
+							<option value='RO'>RO</option>
+							<option value='RR'>RR</option>
+							<option value='RS'>RS</option>
+							<option value='SC'>SC</option>
+							<option value='SE'>SE</option>
+							<option value='SP'>SP</option>
+							<option value='TO'>TO</option>
+						</select><br />
+						<label for="mensagem">Mensagem:</label>
+						<textarea name="Mensagem" cols="82" rows="4" class="textocinza" id="mensagem"></textarea><br />
+						<!-- Chave de autenticação no UltraMail para o MailBox. 
+                         Se a senha do MailBox for alterada esta chave deverá ser gerada novamente através do seu painel de controle.-->
+						<br />
+						<label for="enviar">&nbsp;</label>
+						<input name="Enviar" type="button" class="botao_azul" value="Enviar" onClick="javascript:validarFormTela();" />
+						&nbsp; <input name="Limpar" type="reset" class="botao_azul" value="Limpar" />
+						<br />
+						<input type="hidden" name="key" value="eJwBlABr/3312TOJnM7dm5hwwVuepA4m9uwxgudTj1ZHLLrF8U+QX+neleWFvKMjI/+3Eg6+G8zNAa0vm9tFEVntD66wNMbLRnPbD6ArRC3YYQaxqY02WfJxWwzj/OeOqL9KHQhb9MsLxbjlcRgs4Zbji4gZdITzXPTm4gRL0VBCDdU58Hw8Eo7V2raR54cmD5DiKwrmCKM40r3jkU0n"
+							ID="Hidden3" /> <input type="hidden" name="redirect" value="http://www.atlasradiodiagnostico.com.br/respostaContato.htm"
+							ID="Hidden2" />
+					</form>
+				</div>
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+			</div>
+			<div id="conteudo_d">&nbsp;</div>
+			<div id="footer">
+				<a href="default.aspx">Home</a>&nbsp;|&nbsp; <a href="empresa.htm">Empresa</a>&nbsp;|&nbsp;
+				<a href="servicos.htm">Servi&ccedil;os</a>&nbsp;|&nbsp; <a href="contato.html">Contato</a>&nbsp;|&nbsp;
+				<a href="novoLogin.aspx">Login</a><br />
+				&copy; Copyright Imaging Rio
+			</div>
+		</div>
+	</body>
+</html>

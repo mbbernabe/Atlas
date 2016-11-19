@@ -1,0 +1,434 @@
+﻿root { 
+    display: block;
+}
+
+body {
+
+    margin : 0;
+	padding: 0;
+	font: 12px/1.5 Verdana, Arial, Helvetica, sans-serif;
+	line-height: 1.6em;
+	color:Black;
+	margin-right:1%;
+	text-align:center;
+	 
+      
+    
+}
+/* *******************************************************************************
+   configuração do body para template de duas colunas, com navegação a esquerda.
+   Para utilizar deve-se utilizar o <body id='duascolunas'>
+   *******************************************************************************  */
+
+body#duasColunas #direita {
+	display:none; /* 'Some' com a coluna de apoio */
+	}
+body#duasColunas #principal {
+	width:80%; /* Estende a coluna principal */
+	border-right-width:0;
+	padding-right:0;
+	}
+
+/* *******************************************************************************
+	configuração do body para template de duas colunas, com coluna de apoio a direita.
+ Para utilizar deve-se utilizar o <body id='duascolunasNavDir'>
+  *******************************************************************************  */
+body#duasColunasNavDir #direita {
+	display:none; /* 'Some' com a coluna de navegação a direita */
+	}
+
+body#duasColunasNavDir #principal {
+	width:80%; /* Estende a coluna principal */	
+	}
+
+/* *******************************************************************************
+  configuração do body para template para navegação horizontal, e uma única coluna
+  Para utilizar deve-se utilizar o <body id='umaColunaNavHorizontal'>
+/* *******************************************************************************  */
+
+body#umaColuna #esquerda {
+   /* Coloca a coluna de navegação abaixo do topo e acima da coluna principal, ocupando toda a extenssão disponível */
+	display:none; /* 'Some' com a coluna de apoio */
+	}
+body#umaColuna #direita {
+	display:none; /* 'Some' com a coluna de apoio */
+	}
+	
+
+
+
+
+
+
+/* *******************************************************************************  */
+/* Layout Variante, Basta mudar a class do body para 'variante-a'                   */
+/* *******************************************************************************  */
+body.variante-a #topo, body.variante-a #rodape{
+	font: 12px Verdana, Arial, Helvetica, sans-serif;
+	background:#cff;
+	padding-bottom:1px;
+	}
+body.variante-a	{
+	background:#fff;
+	font: 14px Georgia, "Times New Roman", Times, serif;
+	}
+body.variante-a #principal  {
+	color:#c30;
+	}
+
+
+
+/* *******************************************************************************  */
+/* *******************************************************************************  */
+/* *******************************************************************************  */
+
+
+/* Layout AtlasRadioDiagnostico, Basta mudar a class do body para 'atlas'           */
+
+
+/* *******************************************************************************  */
+/* *******************************************************************************  */
+/* *******************************************************************************  */
+
+body.atlas	{
+	background-color:Silver;
+	font: 14px Georgia, "Times New Roman", Times, serif;
+	text-align:center;
+	}	
+	
+body.atlas #tudo {
+   /* Coloca a coluna de navegação abaixo do topo e acima da coluna principal, ocupando toda a extenssão disponível */
+	 text-align:center;
+	 
+	 
+	}	
+body.atlas #rodape{
+	font: 12px Verdana, Arial, Helvetica, sans-serif;
+	background-color:#FFFBFF;
+	margin-top:50px;
+	width:95%;
+	}
+	
+body.atlas #principal  
+{
+	 text-align:center;	 
+	 background-color:#FFFBFF;
+	 width:95%;
+	
+}
+
+body.atlas	#cabecalho {
+	background-color:#FFFBFF;
+	height:120px;
+	margin-top:50px;
+	width:95%;
+	text-align:center;
+	 		
+	}		
+
+.divImagemLateral
+{
+	 float:left;
+	 margin-left:20px; 
+	 margin-top:10px;	
+	 height: 232px;	
+	 width: 20%;
+}
+	
+
+.divTexto
+{
+	text-align:left;
+	float:left;
+	width:70%; 
+	margin:10px 10px 10px 10px;   
+	padding:10px 10px 10px 10px ; 
+	border:solid 1px blue  
+}
+
+.atlas_box_center {
+	text-align:left;
+	float:none;		
+	width: 88%;	
+	margin: 10px 10px 10px 10px;
+	padding: 5% 5% 5% 5%;	
+	border:solid 1px blue; 
+	
+}	
+	.atlas_box_center h1 { margin: 0 0 20px 0;}
+	.atlas_box_center .white { color: #FFF; background-color:transparent; }
+	
+.divText_Centralizado
+{
+	text-align:left;  
+	float:left; 
+	width:80%; 
+	margin:10px 10px 10px 10px;   
+	padding:10px 10px 10px 10px ; 
+	
+}	
+
+/* *******************************************************************************
+         configuração para layout de 3 colunas -
+	Esta á a configuração Padrão (Não precisa definir o id do body)
+  *******************************************************************************  */
+
+#tudo
+{
+	text-align: center;
+	left: 0;
+	top: 10;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+    margin-left: 1%;
+    margin-right:1%;
+}	
+
+/* Alinhamento da div Principal para o Mozilla Firefox, pois o text:center 
+	só funciona no IE */
+#tudo 
+{
+	text-align: -moz-center;
+	left: 0;
+	top: 10;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	margin-left: 1%;
+    margin-right:1%;
+}
+	
+#cabecalho {
+	width: 100%;
+	text-align: left;
+	height:50px;
+	margin-left:10px;	    
+	}
+
+
+#rodape {
+	clear:both;
+	text-align:center;	
+    width:100%;
+    margin-left:10px;
+    
+	}
+
+
+
+#principal {
+	float:left;
+	width:60%;
+	margin-left:10px;
+	text-align:center;
+   
+	}
+#esquerda {
+	width:17%;
+	float:left;
+	}
+#direita {
+	width:17%;
+	float:right;       
+	}
+	
+/* *******************************************************************************  */
+	
+	
+	
+	
+	
+	
+	
+
+#divLogo{
+    width:20%;
+	float:left;
+	height:49px;
+}
+#divMenu{
+ border-bottom-style:solid;
+ border-bottom-width:thin;
+ color: #E5EAF2; 
+}
+	
+	
+
+ul, ol {
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+	
+h1  
+{ 
+	font: bold 2em "Trebuchet MS", Helvetica, Sans-Serif; 
+	text-align:center;
+	margin: 0; 
+	color: #8D9CAF; 
+	background-color:transparent; 
+}	
+	
+h2, h3 {
+	margin: 0.8em 0;
+	color:#c30;
+	font-size:1.4em;
+	}
+h2 {
+	font-size:1.2em;
+	}
+h3 {
+	font-size:1.0em;
+	}
+
+.dest {
+	color:#039;
+	}
+
+.lstHorizontal ul, ol{
+	margin:0;
+	padding:0;
+	list-style:none;
+        display: inline;
+}
+
+	
+	
+
+
+.listaMenu {
+	float: right;
+	/*background: #fff url(/imagens/barul.gif) no-repeat bottom right;*/
+	color: #808080;
+	position: relative;
+
+	
+	
+}
+	.listaMenu li { 
+		padding: 14px 18px 14px 18px; 
+		color: #444; 
+		/*background: #fff url(/imagens/bar.gif) no-repeat bottom left; */
+		display: inline; 
+	}
+	.listaMenu li.active { 
+      /*background: #fff url(/imagens/baractive.gif) no-repeat bottom left; */
+		color: #8D9CAF; 
+		font-weight: bold; 
+		padding: 14px 18px 14px 18px; 
+		margin: 0 1px 0 0; 
+	}
+	.listaMenu li a { 
+		background: #f8f8f8; 
+		color: #808080; 
+		text-decoration: none; 
+	} 	
+	.listaMenu li a:hover { 
+		color: #000; 
+		background: #f8f8f8; 
+	} 	
+	.key { text-decoration: underline; } /* ACCESKEY UNDERLINED LETTER */
+
+
+
+.listaMenuCenter {
+	float:none;
+	/*background: #fff url(/imagens/barul.gif) no-repeat bottom right;*/
+	color: #808080;
+	position: relative;
+
+	
+	
+}
+	.listaMenuCenter li { 
+		padding: 14px 18px 14px 18px; 
+		color: #444; 
+		/*background: #fff url(/imagens/bar.gif) no-repeat bottom left; */
+		display: inline; 
+	}
+	.listaMenuCenter li.active { 
+      /*background: #fff url(/imagens/baractive.gif) no-repeat bottom left; */
+		color: #8D9CAF; 
+		font-weight: bold; 
+		padding: 14px 18px 14px 18px; 
+		margin: 0 1px 0 0; 
+	}
+	.listaMenuCenter li a { 
+		background: #f8f8f8; 
+		color: #808080; 
+		text-decoration: none; 
+	} 	
+	.listaMenuCenter li a:hover { 
+		color: #000; 
+		background: #f8f8f8; 
+	} 	
+	.key { text-decoration: underline; } /* ACCESKEY UNDERLINED LETTER */
+
+
+
+.box1 {
+	float: left;
+	width: 100%;	
+	color:  #547592; 
+	margin: 0px 0px 0px 0px;
+	padding: 5% 0% 5% 20%;
+	border: 1px solid #e2e2e2;
+}
+	.box1 h1 { margin: 0 0 20px 0;}
+	.box1 .white { color: #FFF; background-color:transparent; }
+
+
+.box1_left {
+	float: left;
+	text-align:left;
+	width: 100%;	
+	color:  #547592; 
+	margin: 0px 0px 0px 0px;
+	padding: 5% 0% 5% 20%;
+	
+}
+	.box1 h1 { margin: 0 0 20px 0;}
+	.box1 .white { color: #FFF; background-color:transparent; }
+
+
+.box1_center {
+	float: left;
+	width: 100%;	
+	color:  #547592; 
+	margin: 0px 0px 0px 0px;
+	padding: 5% 0% 5% 0%;	
+	text-align:center;
+}	
+	.box1_center h1 { margin: 0 0 20px 0;}
+	.box1_center .white { color: #FFF; background-color:transparent; }
+
+
+/* Alinhamento do box_center para o Mozilla Firefox, pois o text:center 
+	só funciona no IE */
+
+.box1_center {
+	float: left;
+	width: 100%;	
+	color:  #547592; 
+	margin: 0px 0px 0px 0px;
+	padding: 5% 0% 5% 0%;	
+	/*border: 1px solid #e2e2e2;*/
+	text-align:-moz-center;
+}
+	.box1_center h1 { margin: 0 0 20px 0;}
+	.box1_center .white { color: #FFF; background-color:transparent; }
+	
+
+.box_login
+{
+ float :left;
+ border: 1px solid #e2e2e2;
+ height:50%;
+ 
+}
+
+			
+	

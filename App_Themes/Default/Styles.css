@@ -1,0 +1,235 @@
+﻿body {
+	margin: 0;
+	padding: 0;
+	
+	line-height: 1.6em;
+	color:Black;
+	margin-right:1%;
+	
+}
+
+/* LINKS AND HEADINGS STYLING */
+
+a 
+{ 
+	color: #546F92; 
+	background: inherit; 
+}
+a:hover 
+{ 
+	color: #808080; 
+	background: inherit; 
+}
+h1  
+{ 
+	font: bold 2em "Trebuchet MS", Helvetica, Sans-Serif; 
+	margin: 0; 
+	color: #8D9CAF; 
+	background-color:transparent; 
+}
+h2  
+{ 
+	font: bold 1.4em "Trebuchet MS",Helvetica, Sans-Serif; 
+}
+h3 
+{ 
+	clear: both; 
+	font-size: 1.1em; 
+	color: #000; 
+	background: #fff url(/imagens/h3bg.gif) no-repeat center left; 
+	padding: 0 14px; 
+	margin: 0;
+}
+.blue 
+{ 
+	color: #546F92; 
+	background: inherit; 
+}
+.image 
+{ 
+	float: left; 
+	border: 2px solid #e2e2e2; 
+	padding: 3px; 
+	margin: 0 15px 10px 0; 
+}
+
+#caixa
+{
+	text-align: center;
+	left: 0;
+	top: 10;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	margin-left:10px;
+	margin-right:10px;
+}	
+
+/* Alinhamento da div Principal para o Mozilla Firefox, pois o text:center 
+	só funciona no IE */
+#caixa 
+{
+	text-align: -moz-center;
+	left: 0;
+	top: 10;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+
+#divTopo{
+	width: 100%;
+	text-align: left;
+	height:50px;
+	border-bottom-style:solid;
+	border-bottom-width:thin;
+    color: #E5EAF2; 
+	
+}
+
+#divLogo{
+    width:20%;
+	float:left;
+	height:50px;
+}
+
+#divMenu{
+ width:80%;
+ height:10px;
+ margin-left:20%;
+ margin-top:30px;
+ 
+}
+
+.listaMenu {
+	float: right;
+	/*background: #fff url(/imagens/barul.gif) no-repeat bottom right;*/
+	color: #808080;
+	position: relative;
+	
+	
+}
+	.listaMenu li { 
+		padding: 14px 18px 14px 18px; 
+		color: #444; 
+		/*background: #fff url(/imagens/bar.gif) no-repeat bottom left; */
+		display: inline; 
+	}
+	.listaMenu li.active { 
+      /*background: #fff url(/imagens/baractive.gif) no-repeat bottom left; */
+		color: #8D9CAF; 
+		font-weight: bold; 
+		padding: 14px 18px 14px 18px; 
+		margin: 0 1px 0 0; 
+	}
+	.listaMenu li a { 
+		background: #f8f8f8; 
+		color: #808080; 
+		text-decoration: none; 
+	} 	
+	.listaMenu li a:hover { 
+		color: #000; 
+		background: #f8f8f8; 
+	} 	
+	.key { text-decoration: underline; } /* ACCESKEY UNDERLINED LETTER */
+
+#conteudo
+{
+	width:100%;
+	padding-bottom: 30px;
+	margin-top:3%;
+
+}
+
+#colunaNavegacao{
+    float:left;
+    width:20%;
+}
+
+#colunaConteudo
+{
+	display:inline; /*Bug da margem dupla para floats no IE*/ 
+    float:left;
+    width:52%;
+    margin-left:2%;
+ }
+
+#colunaLink{
+  float :left;
+  width :20%;
+  margin-left:4%;
+}
+
+#rodape
+{
+	width:100%;
+	position: absolute;
+	bottom: 0;
+	
+}
+.clear {clear:both;}
+
+#intro_right {
+	float: left;
+	width: 90%;	
+	color:  #547592; 
+	margin: 0px 0px 6px 0px;
+	padding: 5% 0% 0 5%;
+	border: 1px solid #e2e2e2;
+	 
+}
+	#intro_right h1 { margin: 0 0 20px 0; }
+	#intro_right .white { color: #FFF; background-color:transparent; }
+	
+.box1 {
+	float: left;
+	width: 100%;	
+	color:  #547592; 
+	margin: 0px 0px 0px 0px;
+	padding: 5% 0% 5% 5%;	
+	border: 1px solid #e2e2e2;
+	
+		 
+}
+	.box1 h1 { margin: 0 0 20px 0;}
+	.box1 .white { color: #FFF; background-color:transparent; }
+
+
+.box1_center {
+	float: left;
+	width: 100%;	
+	color:  #547592; 
+	margin: 0px 0px 0px 0px;
+	padding: 5% 0% 5% 0%;	
+	border: 1px solid #e2e2e2;
+	text-align:center;
+	
+	
+	 
+}
+	.box1 h1 { margin: 0 0 20px 0;}
+	.box1 .white { color: #FFF; background-color:transparent; }
+
+/* Alinhamento do box_center para o Mozilla Firefox, pois o text:center 
+	só funciona no IE */
+
+.box1_center {
+	float: left;
+	width: 100%;	
+	color:  #547592; 
+	margin: 0px 0px 0px 0px;
+	padding: 5% 0% 5% 0%;	
+	border: 1px solid #e2e2e2;
+	text-align:-moz-center;
+	
+	
+	 
+}
+	.box1 h1 { margin: 0 0 20px 0;}
+	.box1 .white { color: #FFF; background-color:transparent; }
+	
